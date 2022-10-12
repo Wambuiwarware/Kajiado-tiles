@@ -71,3 +71,15 @@ font-weight: 900;
 button{
     background-color: yellow;
 }
+option{
+    background-color: yellow;
+}
+.details{
+    display: inline-block;
+    margin-left: 10%;
+    margin-bottom: 200%;
+    margin-top: 5%;
+}
+.imagebody{
+    display: flex;
+}
