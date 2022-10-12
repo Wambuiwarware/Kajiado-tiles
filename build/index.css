@@ -46,3 +46,16 @@ footer{
 h5{
     font-size: 28px;
 }
+h5:hover{
+    color: yellow;
+}
+footer p:hover{
+    color: yellow;
+    background-color:rgb(14, 14, 4)
+}
+h1{
+    background-color: yellow;
+}
+footer{
+    
+}
