@@ -55,6 +55,7 @@ footer p:hover{
 }
 h1{
     background-color: yellow;
+    padding-left: 30%;
 }
 footer{ display: flex;
     padding-left: 6rem;
@@ -79,7 +80,19 @@ option{
     margin-left: 10%;
     margin-bottom: 200%;
     margin-top: 5%;
+    position: relative;
 }
 .imagebody{
     display: flex;
 }
+#kjd{
+    font-size: 30px;
+    margin-top: 1.5 cm;
+    margin-bottom: 0px;
+
+
+}
+#bar{
+    margin-right: auto;
+    margin-left: 20cm;}
+
