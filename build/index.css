@@ -25,8 +25,7 @@ nav ul li:hover{
 
 }
 *{
-    margin: 0;
-    padding: 0;
+    
     font-family: fantasy;
 }
 #insta{
@@ -55,7 +54,7 @@ footer p:hover{
 }
 h1{
     background-color: yellow;
-    padding-left: 30%;
+   
 }
 footer{ display: flex;
     padding-left: 6rem;
@@ -83,7 +82,7 @@ option{
     position: relative;
 }
 .imagebody{
-    display: flex;
+    
 }
 #kjd{
     font-size: 30px;
@@ -94,5 +93,10 @@ option{
 }
 #bar{
     margin-right: auto;
-    margin-left: 20cm;}
+    margin-left: 15cm;}
+#but{
+margin-right: 0%;
+height: 2cm;
+width:1cm
+}
 

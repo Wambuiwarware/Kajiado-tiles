@@ -1,18 +1,22 @@
 //all the dimensions have been defined
 
 let boxesUsed
-    thirtyByThirty,
-    fiftyByFifty,
-    sixtyBySixty,
-    sixtyByThirty,
-    fortyByTwentyFive,
-    thityByTwenty,
+    priceComp
+    priceOfTile
+    priceDelivery
+    orderCost,
+    orderNumber,
+    orderConfirm,
+    cumulativePrice = 0,
+    priceTotal;
     w,
     l,
     area
 
 let userForm,
   userData = [];
+  var area = l*w
+  
 // Function to find number of boxes based on area
 function noOfBoxes() {
   if (document.getElementById("floor").value == "30 by 30") {
@@ -49,7 +53,7 @@ function compPrice () {
   return priceComp;
 }
 
-// Function to find Pizza Price based on Toppings
+// Function for the price ofbtilemultripied by the number of boxes
 function tilePrice() {
     noOfBoxes()
   if (document.getElementById("floor").value == "30by30") {
@@ -76,7 +80,7 @@ function tilePrice() {
   
 }
 
-// Fuction to find Pizza Delivery Price
+// Fuction for Delivery Price
 function deliveryPrice() {
   if (document.getElementById("del").value == "kajiado") {
     priceDelivery = 0;
@@ -121,7 +125,7 @@ function orderPrice() {
       orderCost
   );
   cumulativePrice += orderCost;
-  alert("The total cost for Pizza(s) order is Kshs. " + cumulativePrice);
+  alert("The total cost for your tile(s) order is Kshs. " + cumulativePrice);
   console.log(cumulativePrice);
   let priceConfirm = confirm("Do you want to make another order?");
   document.getElementById("form").reset();
@@ -156,7 +160,7 @@ function totalOrderPrice() {
     console.log(finalOrder)
   }
   alert(
-    "The total charge for your order Pizza(s) " +
+    "The total charge for your ordered tiles  " +
       finalOrder +
       " and its delivery cost is " +
       priceTotal
