@@ -52,6 +52,12 @@ footer{
     background-color: #e8edf1;
 
 }
+#mark{
+    font-size: xx-large;
+    font-weight: 600px;
+    text-align:center;
+    margin: auto;
+}
 #atag{
     font-size: 13px;
 }
@@ -80,6 +86,9 @@ footer{ display: flex;
 footer h5{
 font-size: 20px;
 font-weight: 900;
+}
+#para{
+    font: size 600px; ;
 }
 button{
     background-color: yellow;
