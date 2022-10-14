@@ -1,26 +1,25 @@
 //all the dimensions have been defined
 
-let boxesUsed
-    priceComp
-    priceOfTile
-    priceDelivery
+let boxesUsed,
+    priceComp,
+    priceOfTile,
+    priceDelivery,
     orderCost,
     orderNumber,
     orderConfirm,
     cumulativePrice = 0,
-    priceTotal;
+    priceTotal,
     w,
-    l,
-    area
+    l;
 
 let userForm,
   userData = [];
-  var length=parseInt(prompt("What is the length on your room?"))
-  var width=parseInt(prompt("What is the width on your room?"))
+  var length=parseInt
+  var width=parseInt
   var area =(length*width)
   
 // Function to find number of boxes based on area
-function noOfBoxes() {
+button.onClick = function noOfBoxes() {
   if (document.getElementById("floor").value == "30 by 30") {
     boxesUsed= Math.floor(area()/1.53);
   } else if (document.getElementById("floor").value == "40 by 40") {
@@ -171,4 +170,8 @@ function totalOrderPrice() {
   document.getElementsByTagName("form").reset();
   history.go();
   alert("Your order will be delivered at your location");
+}
+function myFuction(){
+  var element = document.getElementById('form-s');
+  element.classList.toggle('')
 }
