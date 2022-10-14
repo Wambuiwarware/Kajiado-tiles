@@ -15,7 +15,9 @@ let boxesUsed
 
 let userForm,
   userData = [];
-  var area = l*w
+  var length=parseInt(prompt("What is the length on your room?"))
+  var width=parseInt(prompt("What is the width on your room?"))
+  var area =(length*width)
   
 // Function to find number of boxes based on area
 function noOfBoxes() {
@@ -166,7 +168,7 @@ function totalOrderPrice() {
       priceTotal
   );
 
-  document.getElementById("form").reset();
+  document.getElementsByTagName("form").reset();
   history.go();
   alert("Your order will be delivered at your location");
 }

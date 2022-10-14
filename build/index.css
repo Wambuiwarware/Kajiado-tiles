@@ -10,24 +10,37 @@
     align-items: center;
     justify-content: space-between;
 }
-nav ul li{
+nav li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 0px 8px;
 }
 nav ul li{
     text-decoration: double;
     color: black;
     font-weight: bolder;
+   
+}
+nav ul{
+    float:right;
+    margin-right: 40px;
 }
 nav ul li:hover{
     color:yellow;
 
 }
-*{
-    
-    font-family: fantasy;
+nav a{
+    color:black;
+    font-size: 18px;
+    text-transform: uppercase;
+    border:10px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
 }
+a.active,a:hover{
+    border:1px solid black
+}
+
 #insta{
     width: 15px;
     height: 15px;
@@ -81,8 +94,19 @@ option{
     margin-top: 5%;
     position: relative;
 }
-.imagebody{
-    
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: sans-serif;
+}
+nav{
+    height: 80px;
+    width:100%;
+
 }
 #kjd{
     font-size: 30px;
@@ -98,5 +122,12 @@ option{
 margin-right: 0%;
 height: 2cm;
 width:1cm
+}
+label.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+    padding: 0 100px;
+    line-height: 80px;
 }
 
