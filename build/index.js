@@ -9,34 +9,35 @@ let boxesUsed,
     orderConfirm,
     cumulativePrice = 0,
     priceTotal,
-    w,
-    l;
+    w = parseInt(),
+    l = parseInt(),
+    area;
 
 let userForm,
   userData = [];
-  var length=parseInt
-  var width=parseInt
-  var area =(length*width)
   
 // Function to find number of boxes based on area
-button.onClick = function noOfBoxes() {
+ function noOfBoxes() {
+  var w = prompt("what is the length of your room?")
+   var l =prompt("What is the width of your room?")
+  area = l*w;
   if (document.getElementById("floor").value == "30 by 30") {
-    boxesUsed= Math.floor(area()/1.53);
+    boxesUsed= Math.floor(area/1.53);
   } else if (document.getElementById("floor").value == "40 by 40") {
-    boxesUsed = Math.floor(area()/1.92);}
+    boxesUsed = Math.floor(area/1.92);}
     else if (document.getElementById("floor").value == "50 by 50") {
-        boxesUsed = Math.floor(area()/1.75);}
+        boxesUsed = Math.floor(area/1.75);}
 
     else if (document.getElementById("floor").value == "60 by 60") {
-        boxesUsed = Math.floor(area()/1.44);
+        boxesUsed = Math.floor(area/1.44);
   } 
   else if (document.getElementById("floor").value == "60 by 30") {
-    boxesUsed = Math.floor(area()/1.44);}
+    boxesUsed = Math.floor(area/1.44);}
     else if (document.getElementById("wall").value == "25 by 40") {
-        boxesUsed = Math.floor(area()/1.5);}
+        boxesUsed = Math.floor(area/1.5);}
 
   else {
-    boxesUsed=Math.floor(area()/1.5)
+    boxesUsed=Math.floor(area/1.5)
   return boxesUsed;
 }}
 
@@ -105,14 +106,12 @@ function deliveryPrice() {
 
 //  Function to calculate the order price
 function orderPrice() {
-  noOfBoxes();
   compPrice();
   tilePrice();
   orderCost = compPrice + tilePrice
   userForm = {
-    floor: document.getElementById("floor").value,
+    floor: document.getElementById("forms").value,
     comp: document.getElementById("comp").value,
-    wall: document.getElementById("wall").value
   };
   userData = Object.values(userForm);
   alert(
@@ -151,6 +150,7 @@ function orderPrice() {
 
 // Function to calculate the total price
 function totalOrderPrice() {
+  orderPrice()
   deliveryPrice();
 
   priceTotal = cumulativePrice + priceDelivery; //Calculate order cost plus delivery
@@ -167,7 +167,7 @@ function totalOrderPrice() {
       priceTotal
   );
 
-  document.getElementsByTagName("form").reset();
+  document.getElementsByid("floor").reset();
   history.go();
   alert("Your order will be delivered at your location");
 }
@@ -175,3 +175,4 @@ function myFuction(){
   var element = document.getElementById('form-s');
   element.classList.toggle('')
 }
+fetch

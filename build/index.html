@@ -9,44 +9,45 @@
     <link rel="stylesheet" href="index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<script defer src="index.js"></script>
-<script
-      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
+    <script defer src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
 
 </head>
 
-<body>                      
+<body>
 
     <nav class="hero">
 
-        
-           <label class="logo">KAJIADO TILES</label>
-           <ul>
-                <a>
-                    <li>FLOORS</li>
-                </a>
-                <a>
-                    <li>WALLS</li>
-                </a>
-                <a>
-                    <li>BATHROOMS</li>
-                </a>
-                <a>
-                    <li>ABOUT US</li>
-                </a>
-                <a>
-                    <li>CONTACT US</li>
-                </a>
-           
-                <a ><li>
-                    <button type="button" onclick="totalOrderPrice()">Order</button>   
+
+        <label class="logo">KAJIADO TILES</label>
+        <ul>
+            <a>
+                <li>FLOORS</li>
+            </a>
+            <a>
+                <li>WALLS</li>
+            </a>
+            <a>
+                <li>BATHROOMS</li>
+            </a>
+            <a>
+                <li>ABOUT US</li>
+            </a>
+            <a>
+                <li>CONTACT US</li>
+            </a>
+
+            <a>
+                <li>
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#floor"
+                        onclick="totalOrderPrice()">Order</button>
                     <!-- css not to show display:none -->
-                </li></a>
-               
-              
+                </li>
+            </a>
+
+
 
         </ul>
 
@@ -56,90 +57,70 @@
         <div class="body">
             <div class="heading1 ">
                 <div class="Container flex">
-                <h1>Ceramic, Granite & Porcelain Flooring</h1>
+                    <h1>Ceramic, Granite & Porcelain Flooring</h1>
                 </div>
             </div><br>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
                 crossorigin="anonymous"></script>
-            
-           
+
+
         </div>
         <section>
-            <div id="form-s">
+            <div class="modal fade" id="forms" role="dialog">
+                <div class="modal-dialog">
+                    <!-- to form pop-up -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title">totalOrderPrice</h1>
+                        </div>
+                        <div class="modal-body">
+                            <div id="form-s">
+                                <form action="javascript:noOfBoxes()" name="form" id="floor">
+                                    <label for=" tile">Choose your ideal tile</label>
+                                    <select class="form-control" name="tilefloor" id="tilefloor" value="tilefloor"
+                                        required>
+                                        <option value="" selected>--30 by 30</option>
+                                        <option value="30by30"> 30 by 30</option>
+                                        <option value="40by 40"> 40 by 40</option>
+                                        <option value="50by50">50 by 50</option>
+                                        <option value="60by60">60 by 60</option>
+                                        <option value="60by30">60 by 30</option>
+                                    </select></label>
+                                    <label for="preffered wall tile">preffered wall tile</label>
+                                    <select class="form-control" name="wall" id="wall" value="wall" required>
+                                        <option value="" selected>--wall tile--</option>
+                                        <option value="25by40"> 25 by 400</option>
+                                        <option value="40by 40"> 20 by 30</option>
+                                    </select>
+                                    <label for="What complimentaries will you use?">What complimentaries will you
+                                        use</label>
+                                    <select class="form-control" name="complementaries" id="comp" value="comp" required>
+                                        <option value="grout"> grouting</option>
+                                        <option value="tileadh"> tile adhesive</option>
+                                        <option value="cornerstrips">Cornerstrips</option>
+                                        <option value="alumcornerstrips">AluminiumCornerstrips</option>
+                                    </select>
+                                    <br />
+                                    <input class="btn-success" type="submit" id="submit" value="Add to Order"
+                                        onsubmit=reset() />
+                                </form>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                                        Cancel Order
 
-                <form action="javascript:noOfBoxes()" id="floor">
-                    <label for="Choose your ideal tile">Choose your ideal tile</label><select name="30by30">
-                    <option value="30by30"> 30 by 30</option>
-                    <option value="40by 40"> 40 by 40</option>
-                    <option value="50by50">50 by 50</option>
-                    <option value="60by60">60 by 60</option>
-                    <option value="60by30">60 by 30</option>
-                </select></label>
-                <label for="preffered wall tile">preffered wall tile</label><select name="wall" id="wall">
-                    <option value="25by40"> 25 by 400</option>
-                    <option value="40by 40"> 20 by 30</option>
-                </select>
-                <label for="What complimentaries will you use?">What complimentaries will you use</label><select name="complementaries" id="comp">
-                    <option value="grout"> grouting</option>
-                    <option value="tileadh"> tile adhesive</option>
-                    <option value="cornerstrips">Cornerstrips</option>
-                    <option value="alumcornerstrips">AluminiumCornerstrips</option>
-                </select>
-                <br />
-                <input
-                  class="btn-success"
-                  type="submit"
-                  id="submit"
-                  value="Add to Order"
-                  onsubmit= reset()
-               />
-              </form>
-          </section>
-        
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/chair-g917625deb_640.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Blue Wall Tile</h5>
-                  <p id="para">Tile for commercial use, satisfied hotel client.<br>Looking for high-quality tiles? Look no further than our tiles shop! We carry a wide selection of tiles in all shapes, sizes, and colors. Whether you're looking for a specific tile for your home or just want to browse, our knowledgeable staff is always here to help.</P>
-                  </p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="images/bathroom-g5c8ed8666_640.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>marble tile</h5>
-                  <p>Do you like , raw and earthy?,this is the tile for you.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="images/bathroom-gc78d2190c_640.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>personal use </h5>
-                  <p>Oboe tile at a home bathroom</p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-          
-          <section>
-            <form action="">
-                <label for="What is your delivery location?">
+
+
+        </section>
+        <div id="form1-h">
+            <form name="form1" id="form1">
+                <label for="location">What is your delivery location?</label>
                 <select name="Delivery" id="del">
                     <option value="Kajiado">Kajiado Town</option>
                     <option value="bluesky">Blue Sky</option>
@@ -149,31 +130,105 @@
                     <option value="Isinya">Isinya</option>
                     <option value="Mashuru">Mashuru</option>
                     <option value="Oloyiangalani">Oloyiangalani</option>
-                </select></label>
+                </select>
+            </form>
+            <div class="modal-footer">
+                <button
+                id="order here"
+                type="button"
+                class="btn btn-success"
+                data-dismiss="modal"
+                onclick="totalOrderPrice()">Check out
+                
+                    
+                </button>
+                <button
+                type="button"
+                class="btn btn-danger"
+                data-dismiss="modal">
+                Cancel your order
+                    
+                </button>
+        
+            </div>
+        </div>
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/chair-g917625deb_640.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Blue Wall Tile</h5>
+                        <p id="para">Tile for commercial use, satisfied hotel client.<br>Looking for high-quality tiles?
+                            Look no further than our tiles shop! We carry a wide selection of tiles in all shapes,
+                            sizes, and colors. Whether you're looking for a specific tile for your home or just want to
+                            browse, our knowledgeable staff is always here to help.</P>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bathroom-g5c8ed8666_640.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>marble tile</h5>
+                        <p>Do you like , raw and earthy?,this is the tile for you.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/bathroom-gc78d2190c_640.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>personal use </h5>
+                        <p>Oboe tile at a home bathroom</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="form1-h">
+
+        </div>
+        <section>
+
             </form>
 
-          </section>
-          <footer>
+        </section>
+        <footer>
             <div>
-        
+
                 <h5>Enquiries</h5>
                 <p>My Quote</p>
-        
+
                 <p>How can i shop online?</p>
                 <p> How can i hoose the right tile?</p>
                 <p>Email:kajiadotiles@gmail.com</p>
                 <p>Phone number 0728900508</p>
             </div>
-        
+
             <div>
                 <h5>Information</h5>
                 <p>Delivery</p>
                 <p>Return policy</p>
                 <p>Privacy policy</p>
-        
-        
+
+
             </div>
-            
+
             <div>
                 <h5>Socials</h5>
                 <ul>
@@ -187,44 +242,40 @@
                         <li><img id="insta" src="download.png" alt="linkedin">linkedin</li>
                     </a>
                 </ul>
-            
+
             </div>
-        
-            
+
+
             <div>
                 <h5>Location</h5>
                 <p>Along Kajiado-Namanga Highway, opposite Tata Factory</p>
             </div>
-        </div>
-        
-        </footer>
-        </div>
+    </div>
+
+    </footer>
+    </div>
 
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
-          <!-- Form in the pop-up -->
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title">Choose Your Preffered Tile</h1>
-            </div>
-            <div class="modal-body">
-              <!-- This is the form that alllows the user to specify their preffered Pizza -->
-             
+            <!-- Form in the pop-up -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Choose Your Preffered Tile</h1>
+                </div>
+                <div class="modal-body">
+                    <!-- This is the form that alllows the user to specify their preffered Pizza -->
 
-              <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-danger"
-                data-dismiss="modal"
-              >
-                Cancel Order
-              </button>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
+                            Cancel Order
+                        </button>
+                    </div>
+                </div>
+
             </div>
-              </div>
-             
-    </div>
-    
-</div>
+
+        </div>
 
 
 </body>
