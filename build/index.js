@@ -174,48 +174,23 @@ deliveryPrice();
   alert("Your order will be delivered at your location");
 }
 
-var mpesa = require('mpesa-api')
- 
-mpesa.config({
-  environment: 'production', // default is sandbox
-    // when using production make sure you have your app credentials handy
-  consumerKey: 'your-app-consumer-key',
-  consumerSecret: 'your-app-consumer-secret',
-  shortCode: 'your-shortcode',
-  initiatorName: 'your-initiator-name',
-  lipaNaMpesaShortcode: 'your-lipa-na-mpesa-shortcode',
-  lipaNaMpesaPasskey: 'your-lipa-na-mpesa-passkey',
-  securityCredential: 'your-security-credential'
-})
- 
-// use the library as normal
-mpesa. LipaNaMpesaOnline(options, function (error, response) {
-  if (error) {
-    // handle error here
+function stockAvailable(stock) {
+
+  if (stock > 0) {
+  
+  document.getElementById('form').innerHTML = 'In stock';
+  
   } else {
-    // handle success
+  
+  document.getElementById('form').innerHTML = 'Out of stock';
+  
   }
-})
-const express = require('express');
-require('dotenv').config();
+  
+  }
+  function addDiscount(){
 
-const app = express();
-const PORT = process.env.PORT || process.env.APP_PORT;
-
-//app configurations
-app.use(express.json());
-
-app.use(express.urlencoded({extended:false}));
-
-//route.
-const mpesa = require('./routes/index');
-
-//listening to a specific route
-app.use('/mpesa',mpesa);
-
-
-//listening to a port.
-
-app.listen(PORT, () => {
-    console.log(`app listening on port ${PORT}`)
-});
+    var discount=document.getElementById('form');
+    
+    discount.innerHTML=discount.innerHTML+'<p>10% off your purchase!</p>';
+    
+    }
