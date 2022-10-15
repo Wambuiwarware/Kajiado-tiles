@@ -174,14 +174,13 @@ deliveryPrice();
   popup("Your order will be delivered at your location");
 }
 
-function stockAvailable(stock) {
+function stockAvailable() {
 
-  if (stock > 0) {
+ 
   
-  var stocking = confirm("Welcome your tile is available")
+  var stock = confirm("Welcome your tile is available")
   
-  }
-  else{ ('comeback another day')}
+ 
   
   }
   function addDiscount(){
