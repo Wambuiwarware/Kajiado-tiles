@@ -16,6 +16,7 @@ let boxesUsed,
 let userForm,
   userData = [];
   
+  
 // Function to find number of boxes based on area
  function noOfBoxes() {
   var w = prompt("what is the length of your room?")
@@ -172,3 +173,49 @@ deliveryPrice();
   history.go();
   alert("Your order will be delivered at your location");
 }
+
+var mpesa = require('mpesa-api')
+ 
+mpesa.config({
+  environment: 'production', // default is sandbox
+    // when using production make sure you have your app credentials handy
+  consumerKey: 'your-app-consumer-key',
+  consumerSecret: 'your-app-consumer-secret',
+  shortCode: 'your-shortcode',
+  initiatorName: 'your-initiator-name',
+  lipaNaMpesaShortcode: 'your-lipa-na-mpesa-shortcode',
+  lipaNaMpesaPasskey: 'your-lipa-na-mpesa-passkey',
+  securityCredential: 'your-security-credential'
+})
+ 
+// use the library as normal
+mpesa. LipaNaMpesaOnline(options, function (error, response) {
+  if (error) {
+    // handle error here
+  } else {
+    // handle success
+  }
+})
+const express = require('express');
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || process.env.APP_PORT;
+
+//app configurations
+app.use(express.json());
+
+app.use(express.urlencoded({extended:false}));
+
+//route.
+const mpesa = require('./routes/index');
+
+//listening to a specific route
+app.use('/mpesa',mpesa);
+
+
+//listening to a port.
+
+app.listen(PORT, () => {
+    console.log(`app listening on port ${PORT}`)
+});
