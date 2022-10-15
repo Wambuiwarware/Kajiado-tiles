@@ -1,0 +1,145 @@
+.hero{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    background-color: #e8edf1;
+    display: flex;
+    width: 100%;
+    margin:auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+nav li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 8px;
+}
+nav ul li{
+    text-decoration: double;
+    color: black;
+    font-weight: bolder;
+   
+}
+nav ul{
+    float:right;
+    margin-right: 40px;
+}
+nav ul li:hover{
+    color:yellow;
+
+}
+nav a{
+    color:black;
+    font-size: 18px;
+    text-transform: uppercase;
+    border:10px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+a.active,a:hover{
+    border:1px solid black
+}
+
+#insta{
+    width: 15px;
+    height: 15px;
+}
+footer{
+    
+    margin-bottom: 15%;
+    padding: 20px;
+    background-color: #e8edf1;
+
+}
+#mark{
+    font-size: xx-large;
+    font-weight: 600px;
+    text-align:center;
+    margin: auto;
+}
+#atag{
+    font-size: 13px;
+}
+h5{
+    font-size: 28px;
+}
+h5:hover{
+    color: yellow;
+}
+footer p:hover{
+    color: yellow;
+    background-color:rgb(14, 14, 4)
+}
+h1{
+    background-color: yellow;
+   
+}
+footer{ display: flex;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    justify-content: space-between;
+    font-size: 16px ;
+    font-weight: lighter;
+    
+}
+footer h5{
+font-size: 20px;
+font-weight: 900;
+}
+#para{
+    font: size 600px; ;
+}
+button{
+    background-color: yellow;
+}
+option{
+    background-color: yellow;
+}
+.details{
+    display: inline-block;
+    margin-left: 10%;
+    margin-bottom: 200%;
+    margin-top: 5%;
+    position: relative;
+}
+*{
+    padding: 0.15cm;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: sans-serif;
+}
+nav{
+    height: 80px;
+    width:100%;
+
+}
+#kjd{
+    font-size: 30px;
+    margin-top: 1.5 cm;
+    margin-bottom: 0px;
+
+
+}
+#bar{
+    margin-right: auto;
+    margin-left: 15cm;}
+#but{
+margin-right: 0%;
+height: 2cm;
+width:1cm
+}
+label.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+    padding: 0 100px;
+    line-height: 80px;
+}
+#insta{
+    height: 1cm;
+    width:1cm;
+}
