@@ -66,8 +66,8 @@
 
 
         </div>
-        <section>
-            <div class="modal fade" id="forms" role="dialog">
+        
+            <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
                     <!-- to form pop-up -->
                     <div class="modal-content">
@@ -76,52 +76,61 @@
                         </div>
                         <div class="modal-body">
                             <div id="form-s">
-                                <form action="javascript:noOfBoxes()" name="form" id="floor">
+                                <form action="javascript:totalOrderPrice" name="form" id="form">
                                     <label for=" tile">Choose your ideal tile</label>
                                     <select class="form-control" name="tilefloor" id="tilefloor" value="tilefloor"
                                         required>
-                                        <option value="" selected>--30 by 30</option>
+                                        <option value="" selected>--tile4you</option>
                                         <option value="30by30"> 30 by 30</option>
-                                        <option value="40by 40"> 40 by 40</option>
+                                        <option value="40by40"> 40 by 40</option>
                                         <option value="50by50">50 by 50</option>
                                         <option value="60by60">60 by 60</option>
                                         <option value="60by30">60 by 30</option>
-                                    </select></label>
-                                    <label for="preffered wall tile">preffered wall tile</label>
-                                    <select class="form-control" name="wall" id="wall" value="wall" required>
-                                        <option value="" selected>--wall tile--</option>
                                         <option value="25by40"> 25 by 400</option>
-                                        <option value="40by 40"> 20 by 30</option>
+                                        <option value="20by30"> 20 by 30</option>
                                     </select>
-                                    <label for="What complimentaries will you use?">What complimentaries will you
-                                        use</label>
+                                    
+                                    <label for="complimentaries ">What complimentaries will you use</label>
                                     <select class="form-control" name="complementaries" id="comp" value="comp" required>
+                                        <option value="" selected>--cpmplementaries</option>
                                         <option value="grout"> grouting</option>
                                         <option value="tileadh"> tile adhesive</option>
                                         <option value="cornerstrips">Cornerstrips</option>
                                         <option value="alumcornerstrips">AluminiumCornerstrips</option>
                                     </select>
                                     <br />
-                                    <input class="btn-success" type="submit" id="submit" value="Add to Order"
-                                        onsubmit=reset() />
+                                    <input 
+                                    class="btn-success" 
+                                    type="submit" 
+                                    id="submit" 
+                                    value="Add to Order"
+                                    onsubmit= reset()
+                                     />
                                 </form>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                                <button type="button" 
+                                class="btn btn-danger" 
+                                data-dismiss="modal"
+                                >
                                         Cancel Order
 
-                                    </button>
+                                </button>
                                 </div>
+                            </div>
+                            
+
                             </div>
                         </div>
                     </div>
                 </div>
 
 
-        </section>
+        
         <div id="form1-h">
             <form name="form1" id="form1">
                 <label for="location">What is your delivery location?</label>
-                <select name="Delivery" id="del">
+                <select class="form-control" name="Delivery" id="dprice" required>
+                    <option value=""selected>--Choice destination</option>
                     <option value="Kajiado">Kajiado Town</option>
                     <option value="bluesky">Blue Sky</option>
                     <option value="Shapashina">Shapashina</option>
@@ -134,7 +143,7 @@
             </form>
             <div class="modal-footer">
                 <button
-                id="order here"
+                id="place-order"
                 type="button"
                 class="btn btn-success"
                 data-dismiss="modal"
@@ -152,6 +161,7 @@
         
             </div>
         </div>
+        <div class="modal-footer"></div>
 
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
@@ -255,28 +265,8 @@
     </footer>
     </div>
 
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <!-- Form in the pop-up -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title">Choose Your Preffered Tile</h1>
-                </div>
-                <div class="modal-body">
-                    <!-- This is the form that alllows the user to specify their preffered Pizza -->
 
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">
-                            Cancel Order
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
+</div>
 
 </body>
 

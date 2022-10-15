@@ -55,24 +55,27 @@ function compPrice () {
   return priceComp;
 }
 
-// Function for the price ofbtilemultripied by the number of boxes
+// Function for the price ofbtilemultiplied by the number of boxes
 function tilePrice() {
     noOfBoxes()
-  if (document.getElementById("floor").value == "30by30") {
+  if (document.getElementById("form").value == "30by30") {
     priceOfTile = 820*boxesUsed;
-  } else if (document.getElementById("floor").value == "40 by 40") {
+  } else if (document.getElementById("form").value == "40by40") {
     priceOfTile = 1200*boxesUsed;
   } 
-  else if (document.getElementById("floor").value == "50 by 50") {
+  else if (document.getElementById("form").value == "50by50") {
     priceOfTile = 1800*boxesUsed;
   }
-  else if (document.getElementById("floor").value == "60 by 60") {
+  else if (document.getElementById("form").value == "60by60") {
     priceOfTile = 2000*boxesUsed;
   }
-  else if (document.getElementById("floor").value == "60 by 30") {
+  else if (document.getElementById("form").value == "60by30") {
     priceOfTile = 1200*boxesUsed;
   }
-  else if (document.getElementById("wall").value == "40 by 25") {
+  else if (document.getElementById("form").value == "40by25") {
+    priceOfTile = 800*boxesUsed;
+  }
+  else if (document.getElementById("form").value == "30by20") {
     priceOfTile = 800*boxesUsed;
   }
   else {
@@ -84,19 +87,19 @@ function tilePrice() {
 
 // Fuction for Delivery Price
 function deliveryPrice() {
-  if (document.getElementById("del").value == "kajiado") {
+  if (document.getElementById("dprice").value == "kajiado") {
     priceDelivery = 0;
-  } else if (document.getElementById("del").value == "bluesky") {
+  } else if (document.getElementById("dprice").value == "bluesky") {
     priceDelivery = 1000;
-  } else if (document.getElementById("del").value == "Shapashina") {
+  } else if (document.getElementById("dprice").value == "Shapashina") {
     priceDelivery = 1000;
-  } else if (document.getElementById("del").value == "Ilbissil") {
+  } else if (document.getElementById("dprice").value == "Ilbissil") {
     priceDelivery = 3000;
-  } else if (document.getElementById("del").value == "Namanga") {
+  } else if (document.getElementById("dprice").value == "Namanga") {
     priceDelivery = 7000;
-  } else if ((document.getElementById("del").value = "Isinya")) {
+  } else if (document.getElementById("dprice").value = "Isinya") {
     priceDelivery = 2000;
-  } else if (document.getElementById("del").value == "Mashuru") {
+  } else if (document.getElementById("dprice").value == "Mashuru") {
     priceDelivery = 3000;
   } else {
     priceDelivery = 1500;
@@ -108,7 +111,7 @@ function deliveryPrice() {
 function orderPrice() {
   compPrice();
   tilePrice();
-  orderCost = compPrice + tilePrice
+  orderCost = priceComp + priceOfTile
   userForm = {
     floor: document.getElementById("forms").value,
     comp: document.getElementById("comp").value,
@@ -116,11 +119,10 @@ function orderPrice() {
   userData = Object.values(userForm);
   alert(
     "You have picked a " +
-      userForm.floor +
+      userForm.form +
       " " +
       userForm.comp +
       " " +
-      userForm.wall +
       " Hi, The total charge for your tiles is " +
       orderCost
   );
@@ -150,8 +152,7 @@ function orderPrice() {
 
 // Function to calculate the total price
 function totalOrderPrice() {
-  orderPrice()
-  deliveryPrice();
+deliveryPrice();
 
   priceTotal = cumulativePrice + priceDelivery; //Calculate order cost plus delivery
   let finalOrder = " ";
@@ -167,12 +168,7 @@ function totalOrderPrice() {
       priceTotal
   );
 
-  document.getElementsByid("floor").reset();
+  document.getElementsByid("form").reset();
   history.go();
   alert("Your order will be delivered at your location");
 }
-function myFuction(){
-  var element = document.getElementById('form-s');
-  element.classList.toggle('')
-}
-fetch
