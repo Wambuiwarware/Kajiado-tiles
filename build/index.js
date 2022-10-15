@@ -8,10 +8,12 @@ let boxesUsed,
     orderNumber,
     orderConfirm,
     cumulativePrice = 0,
-    priceTotal,
-    w = parseInt(),
-    l = parseInt(),
-    area;
+    priceTotal
+    var w = prompt("what is the length of your room?")
+   var l =prompt("What is the width of your room?")
+  var area = l*w;
+  
+   
 
 let userForm,
   userData = [];
@@ -19,9 +21,7 @@ let userForm,
   
 // Function to find number of boxes based on area
  function noOfBoxes() {
-  var w = prompt("what is the length of your room?")
-   var l =prompt("What is the width of your room?")
-  area = l*w;
+  
   if (document.getElementById("floor").value == "30 by 30") {
     boxesUsed= Math.floor(area/1.53);
   } else if (document.getElementById("floor").value == "40 by 40") {
@@ -171,26 +171,24 @@ deliveryPrice();
 
   document.getElementsByid("form").reset();
   history.go();
-  alert("Your order will be delivered at your location");
+  popup("Your order will be delivered at your location");
 }
 
 function stockAvailable(stock) {
 
   if (stock > 0) {
   
-  document.getElementById('form').innerHTML = 'In stock';
-  
-  } else {
-  
-  document.getElementById('form').innerHTML = 'Out of stock';
+  var stocking = confirm("Welcome your tile is available")
   
   }
+  else{ ('comeback another day')}
   
   }
   function addDiscount(){
 
-    var discount=document.getElementById('form');
-    
+    var discount=
+
+    alert("your Discount is 3% of your purchase")
     discount.innerHTML=discount.innerHTML+'<p>10% off your purchase!</p>';
     
     }
