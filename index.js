@@ -1,4 +1,17 @@
 //all the dimensions have been defined
+var numbers =[20,30,40,50,60]
+var keys =  document.getElementsByid('key')
+var but = document.getElementById('sb')
+function searchFun(){
+  if (numbers.indexOf(Number(keys.value))==-1)
+  document.write(keys.value+"not found")
+  else{
+    '<b> element found at '+numbers.indexOf(Number(keys.value))+'position'
+  }
+
+}
+
+but.addEventListener('click',searchFun)
 
 let boxesUsed,
     priceComp,
